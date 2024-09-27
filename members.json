@@ -1,0 +1,20 @@
+[
+    {
+        "family_name": "Heiner",
+        "move_in_date": "06-25-2002",
+        "num_of_records": 2,
+        "visited_by_bishopric": true,
+        "family_members": [
+            {
+                "name": "Jae",
+                "gender": "male",
+                "birthdate": "05-30-1955"
+            },
+            {
+                "name": "Lily",
+                "gender": "female",
+                "birthdate": "11-15-1956"
+            }
+        ]
+    }
+]

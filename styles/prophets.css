@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+h1 {
+    color: #fff;
+    background-color: #2c3e50;
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.filters button {
+    background-color: #34495e;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filters button:hover,
+.filters button.active {
+    background-color: #14405f;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+#cards section {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    /* padding: 1rem; */
+}
+
+#cards h2 {
+    color: #2c3e50;
+    margin-top: 1rem;
+}
