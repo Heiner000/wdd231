@@ -1,0 +1,82 @@
+@media only screen and (min-width: 768px) {
+    /* Header styles */
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .container {
+        margin: 0;
+    }
+
+    .large-logo {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .small-logo {
+        display: none;
+    }
+
+    /* Navigation styles */
+    nav {
+        display: block;
+        background-color: transparent;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li {
+        margin-left: 1rem;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    /* Main content styles */
+    main {
+        padding: 2rem;
+    }
+
+    /* Grid view styles */
+    #cards.grid-view {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+    }
+
+    #cards.grid-view .member-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* background-color: var(--background-color);
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+        overflow: hidden;
+        text-align: center;
+        padding: 20px;
+        margin: 10px; */
+    }
+
+    #cards.grid-view .member-card img {
+        max-width: 100px;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    /* List view styles */
+    #cards.list-view .member-card {
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+        padding: 1rem;
+    }
+
+    #cards.list-view .member-card h2 {
+        grid-column: auto;
+    }
+}

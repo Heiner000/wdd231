@@ -1,0 +1,79 @@
+[
+    {
+        "name": "Freeport-McMoRan",
+        "address": "333 N Central Ave, Phoenix, AZ 85004",
+        "phone": "(602) 366-8100",
+        "website": "https://www.fcx.com",
+        "image": "fm.webp",
+        "membershipLevel": 3,
+        "industry": "Mining",
+        "employeeCount": 24500,
+        "yearFounded": 1912
+    },
+    {
+        "name": "PetSmart",
+        "address": "19601 N 27th Ave, Phoenix, AZ 85027",
+        "phone": "(623) 580-6100",
+        "website": "https://www.petsmart.com",
+        "image": "petsmart.webp",
+        "membershipLevel": 3,
+        "industry": "Retail",
+        "employeeCount": 56000,
+        "yearFounded": 1986
+    },
+    {
+        "name": "U-Haul International",
+        "address": "2727 N Central Ave, Phoenix, AZ 85004",
+        "phone": "(602) 263-6011",
+        "website": "https://www.uhaul.com",
+        "image": "u-haul.webp",
+        "membershipLevel": 2,
+        "industry": "Moving and Storage",
+        "employeeCount": 30000,
+        "yearFounded": 1945
+    },
+    {
+        "name": "Avnet",
+        "address": "2211 S 47th St, Phoenix, AZ 85034",
+        "phone": "(480) 643-2000",
+        "website": "https://www.avnet.com",
+        "image": "avnet.webp",
+        "membershipLevel": 3,
+        "industry": "Electronics Distribution",
+        "employeeCount": 15000,
+        "yearFounded": 1921
+    },
+    {
+        "name": "Republic Services",
+        "address": "18500 N Allied Way, Phoenix, AZ 85054",
+        "phone": "(480) 627-2700",
+        "website": "https://www.republicservices.com",
+        "image": "republic-services.webp",
+        "membershipLevel": 2,
+        "industry": "Waste Management",
+        "employeeCount": 36000,
+        "yearFounded": 1996
+    },
+    {
+        "name": "Swift Transportation",
+        "address": "2200 S 75th Ave, Phoenix, AZ 85043",
+        "phone": "(602) 269-9700",
+        "website": "https://www.swifttrans.com",
+        "image": "swift-transportation.webp",
+        "membershipLevel": 1,
+        "industry": "Transportation and Logistics",
+        "employeeCount": 21000,
+        "yearFounded": 1966
+    },
+    {
+        "name": "Banner Health",
+        "address": "2901 N Central Ave, Phoenix, AZ 85012",
+        "phone": "(602) 747-4000",
+        "website": "https://www.bannerhealth.com",
+        "image": "banner-health.webp",
+        "membershipLevel": 3,
+        "industry": "Healthcare",
+        "employeeCount": 52000,
+        "yearFounded": 1999
+    }
+]
