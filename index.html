@@ -31,8 +31,7 @@
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/style.css">
 
-    <!-- <script src="./scripts/courses.js" type="module"></script> -->
-    <script src="./scripts/scripts.js" defer></script>
+    <script src="/scripts/scripts.js" defer></script>
 </head>
 
 <body>
@@ -41,7 +40,12 @@
             <img src="./images/profile-picture.png" alt="profile picture" loading="lazy">
             <h1>Garrett Heiner</h1>
         </div>
-        <button class="menu-toggle">☰</button>
+        <button class="menu-toggle" aria-label="toggle menu">
+            <!-- ☰ -->
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <nav>
             <ul>
                 <li>
