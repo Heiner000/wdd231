@@ -26,8 +26,7 @@
 body {
     font-family: var(--body-font);
     color: var(--text-color);
-    /* margin: 0;
-        padding: 0; */
+    font-weight: bolder;
 }
 
 h1 {
@@ -221,11 +220,72 @@ main {
     text-align: center;
 }
 
+#hero-img {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    position: relative;
+}
+
+#hero-img img {
+    width: auto;
+    max-height: 675px;
+    display: block;
+}
+
+#join-btn {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    font-weight: bold;
+    border-radius: 6px;
+    transition: var(--background-color 0.3s ease);
+}
+
+#join-btn:hover {
+    background-color: #a84a2a;
+}
+
+.home-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.home-cards h2 {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    color: var(--background-color);
+    margin-top: 0;
+}
+
+.home-cards section {
+    background-color: var(--background-color);
+    min-height: 35vh;
+}
+
+#current-weather figure {
+    display: flex;
+    justify-content: center;
+}
+
 /* Footer styles */
 footer {
+    display: block;
     background-color: var(--secondary-color);
     color: var(--background-color);
     padding: 1rem;
     text-align: center;
 }
-/* } */
+
+.socials {
+    display: flex;
+    justify-content: center;
+}
+
+.socials img {
+    background-color: var(--background-color);
+    border-radius: 5px;
+}

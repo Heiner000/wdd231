@@ -7,13 +7,6 @@ menuToggle.addEventListener("click", () => {
     menuToggle.classList.toggle("open");
 });
 
-// document.addEventListener("click", (e) => {
-//     if (!navElement.contains(e.target) && !menuToggle.contains(e.target)) {
-//         menuToggle.classList.remove("open");
-//         navElement.classList.remove("open");
-//     }
-// });
-
 // Update copyright  & last modified
 const currentYear = new Date().getFullYear();
 document.getElementById("current-year").textContent = currentYear;

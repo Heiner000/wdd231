@@ -4,19 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phoenix Chamber of Commerce Directory</title>
-    <meta name="description" content="Garrett Heiner's WDD 231 - Phoenix Chamber of Commerce directory page">
+    <title>Phoenix Chamber of Commerce</title>
+    <meta name="description" content="Garrett Heiner's WDD 231 - Phoenix Chamber of Commerce homepage">
     <meta name="author" content="Garrett Heiner">
 
     <meta property="og:title" content="WDD 231 - Garrett Heiner - Phoenix Chamber of Commerce">
     <meta property="og:type" content="website">
     <meta property="og:image" content="">
-    <meta property="og:url" content="https://heiner000.github.io/wdd231/chamber/directory.html">
-    <meta property="og:description" content="Garrett Heiner's WDD 231 - Phoenix Chamber of Commerce directory page">
+    <meta property="og:url" content="https://heiner000.github.io/wdd231/chamber/index.html">
+    <meta property="og:description" content="Garrett Heiner's WDD 231 - Phoenix Chamber of Commerce home page">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="WDD 231 - Garrett Heiner - Phoenix Chamber of Commerce Directory">
-    <meta name="twitter:description" content="Phoenix Chamber of Commerce Directory">
+    <meta name="twitter:title" content="WDD 231 - Garrett Heiner - Phoenix Chamber of Commerce homepage">
+    <meta name="twitter:description" content="Phoenix Chamber of Commerce homepage">
     <meta name="twitter:image" content="https://heiner000.github.io/wdd231/chamber/images/phx-landscape.webp">
 
     <link rel="icon" href="/chamber/images/sunnyCactus.ico" type="image/x-icon">
@@ -31,16 +31,15 @@
     <link rel="stylesheet" href="./styles/small1.css">
     <link rel="stylesheet" href="./styles/large1.css">
 
-    <!-- <script src="scripts/directory.mjs" type="module"></script> -->
-    <script src="scripts/chamber.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <!-- <script src="./scripts/chamber.js" defer></script> -->
 </head>
 
 <body>
     <header>
-        <!-- <div class="container"> -->
         <img src="./images/cactus.png" alt="Phoenix Chamber of Commerce" class="small-logo">
         <img src="./images/phx-landscape.webp" alt="Phoenix Chamber of Commerce" class="large-logo">
-        <h1>Phoenix <span>Chamber of Commerce</span></h1>
+        <h1>Phoenix <br><span>Chamber of Commerce</span></h1>
 
         <button id="menu-toggle" aria-expanded="false" aria-controls="menu-toggle">
             <span class="sr-only">Menu</span>
@@ -48,25 +47,53 @@
         </button>
         <nav id="animate-me" aria-label="Main Navigation">
             <ul class="">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="directory.html" class="open">Directory</a></li>
+                <li><a href="index.html" class="open">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
                 <li><a href="#">Join</a></li>
                 <li><a href="#">Discover</a></li>
             </ul>
         </nav>
-        <!-- </div> -->
     </header>
 
     <main class="container">
-        <div class="view-toggle">
-            <button id="grid-view" aria-label="Grid View">
-                <span class="material-icons">Grid View</span>
-            </button>
-            <button id="list-view" aria-label="List View">
-                <span class="material-icons">List View</span>
-            </button>
+        <div id="hero-img">
+            <picture>
+                <source srcset="images/hero.webp" media="(max-width:1000px)">
+                <!-- Photo by <a href="https://unsplash.com/@gabrielvdz?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Gabriel Valdez</a> on <a href="https://unsplash.com/photos/a-view-of-a-city-with-tall-buildings-iPyailqBGdM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> -->
+                <img src="images/hero-big.webp" alt="Phoenix AZ" loading="eager" width="1050">
+                <!-- Photo by <a href="https://unsplash.com/@_allieastorga_?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Allison Astorga</a> on <a href="https://unsplash.com/photos/a-street-with-tall-buildings-on-either-side-of-it-5vshjw5Ilr4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> -->
+            </picture>
+            <a id="join-btn" href="#">Join Us</a>
         </div>
-        <div id="cards" class="grid-view"></div>
+        <h2 id="home">Home</h2>
+        <div class="home-cards">
+            <section id="events">
+                <h2>Events</h2>
+            </section>
+            <section id="current-weather">
+                <h2>Current Weather</h2>
+                <figure>
+                    <img id="weather-icon" src="#" alt="">
+                </figure>
+                <ul id="weather-stats">
+                    <li id="current-temp"></li>
+                    <li id="weather-desc"></li>
+                    <!-- <li id="high-temp"></li>
+                    <li id="low-temp"></li> -->
+                </ul>
+            </section>
+            <section id="forecast">
+                <h2>Weather Forecast</h2>
+                <ul id="forecast-stats">
+                    <li id="dayOne"></li>
+                    <li id="dayTwo"></li>
+                    <li id="dayThree"></li>
+                </ul>
+            </section>
+            <section id="spotlight">
+
+            </section>
+        </div>
     </main>
 
     <footer>
