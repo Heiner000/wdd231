@@ -1,10 +1,10 @@
 /* Base styles (mobile-first) */
 :root {
     /* color schema */
-    --primary-color: #ce5c35;
-    --secondary-color: #4b878b;
+    --primary-color: #ff906b;
+    --secondary-color: #89a9d2;
     --background-color: #f5f1e3;
-    --text-color: #2c2c2c;
+    --text-color: black;
 
     /* typography */
     --heading-font: "Montserrat", sans-serif;
@@ -31,7 +31,7 @@ body {
 
 h1 {
     font-family: var(--heading-font);
-    color: var(--background-color);
+    color: var(--text-color);
 }
 
 h1 span {
@@ -53,7 +53,7 @@ a {
 /* Header styles */
 header {
     background-color: var(--secondary-color);
-    color: var(--background-color);
+    color: var(--text-color);
     padding: 1rem;
     display: grid;
     grid-template-columns: 44px auto 44px;
@@ -98,7 +98,7 @@ nav ul li {
 }
 
 nav a {
-    color: var(--background-color);
+    color: var(--text-color);
     text-decoration: none;
 }
 
@@ -106,7 +106,7 @@ nav a {
     background: none;
     font-size: 2rem;
     border: none;
-    color: var(--background-color);
+    color: var(--text-color);
     cursor: pointer;
     text-align: right;
     width: 100%;
@@ -144,7 +144,7 @@ main {
 
 .view-toggle button {
     background-color: var(--primary-color);
-    color: var(--background-color);
+    color: var(--text-color);
     border: none;
     /* padding: 0.5rem 1rem; */
     padding: 0.5rem;
@@ -193,7 +193,7 @@ main {
 }
 
 #cards.list-view .member-card a {
-    color: var(--primary-color);
+    color: var(--text-color);
     text-decoration: none;
 }
 
@@ -239,7 +239,7 @@ main {
     right: 2rem;
     padding: 1rem 2rem;
     background-color: var(--primary-color);
-    color: var(--background-color);
+    color: var(--text-color);
     font-weight: bold;
     border-radius: 6px;
     transition: var(--background-color 0.3s ease);
@@ -257,7 +257,7 @@ main {
 .home-cards h2 {
     background-color: var(--primary-color);
     padding: 1rem;
-    color: var(--background-color);
+    color: var(--text-color);
     margin-top: 0;
 }
 
@@ -286,7 +286,7 @@ main {
 footer {
     display: block;
     background-color: var(--secondary-color);
-    color: var(--background-color);
+    color: var(--text-color);
     padding: 1rem;
     text-align: center;
 }

@@ -35,6 +35,11 @@
         margin-left: 1rem;
     }
 
+    .open {
+        text-decoration: underline;
+        text-decoration-color: black;
+    }
+
     #menu-toggle {
         display: none;
     }
