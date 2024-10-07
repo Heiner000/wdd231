@@ -16,7 +16,7 @@ async function apiFetch() {
             throw Error(await response.text());
         } else {
             const data = await response.json();
-            console.log(data);
+            // console.log(data);
             displayResults(data);
         }
     } catch (err) {

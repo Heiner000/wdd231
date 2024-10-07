@@ -242,7 +242,7 @@ main {
     color: var(--text-color);
     font-weight: bold;
     border-radius: 6px;
-    transition: var(--background-color 0.3s ease);
+    /* transition: var(--background-color 0.3s ease-in-out); */
 }
 
 #join-btn:hover {
