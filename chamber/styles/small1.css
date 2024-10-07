@@ -262,13 +262,24 @@ main {
 }
 
 .home-cards section {
-    background-color: var(--background-color);
     min-height: 35vh;
 }
 
 #current-weather figure {
     display: flex;
     justify-content: center;
+}
+
+.member-spotlight {
+    margin: 1rem;
+    padding: 1rem;
+    background-color: var(--background-color);
+}
+
+#events,
+#current-weather,
+#forecast {
+    background-color: var(--background-color);
 }
 
 /* Footer styles */

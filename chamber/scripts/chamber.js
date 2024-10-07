@@ -1,3 +1,5 @@
+import { fetchMembersData, getMembershipLevel } from "./common.js";
+
 // Mobile menu toggle
 const menuToggle = document.querySelector("#menu-toggle");
 const navElement = document.querySelector("#animate-me");
@@ -28,20 +30,6 @@ gridViewBtn.addEventListener("click", () => {
 listViewBtn.addEventListener("click", () => {
     cardsContainer.className = "list-view";
 });
-
-// fetch members data
-async function fetchMembersData() {
-    try {
-        const response = await fetch("./data/members.json");
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
-        return data;
-    } catch (err) {
-        console.error("Could not fetch member data: ", err);
-    }
-}
 
 // display members
 const displayMembers = (members) => {
@@ -81,20 +69,6 @@ const displayMembers = (members) => {
         cards.appendChild(memberCard);
     });
 };
-
-// identify membership level
-function getMembershipLevel(level) {
-    switch (level) {
-        case 1:
-            return "Member";
-        case 2:
-            return "Silver";
-        case 3:
-            return "Gold";
-        default:
-            return "Unknown";
-    }
-}
 
 // fetch and display data
 async function initializePage() {
