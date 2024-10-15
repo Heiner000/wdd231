@@ -28,7 +28,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="./styles/normalize.css">
+    <!-- <link rel="stylesheet" href="./styles/normalize.css"> -->
     <link rel="stylesheet" href="./styles/style.css">
 
     <script src="/scripts/scripts.js" defer></script>
@@ -92,16 +92,16 @@
         <section class="certificates card">
             <h2>Web and Computer Programming Certificate</h2>
             <div class="card-content">
-                <div class="cert-btns">
-                    <button>All</button>
-                    <button>CSE</button>
-                    <button>WDD</button>
+                <div class="filter-btns">
+                    <button id="all">All</button>
+                    <button id="cse">CSE</button>
+                    <button id="wdd">WDD</button>
                 </div>
                 <div class="course-btns">
                 </div>
             </div>
         </section>
-        <!-- </div> -->
+        <dialog id="course-details"></dialog>
     </main>
 
     <footer>

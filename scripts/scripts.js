@@ -94,6 +94,25 @@ document.getElementById(
     "lastModified"
 ).textContent = `Last Modified: ${document.lastModified}`;
 
+// add modal
+const displayCourseDetails = (course) => {
+    const modal = document.getElementById("course-details");
+    modal.innerHTML = `
+    <button id="close-modal">❌</button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits</strong>: ${course.credits}</p>
+    <p><strong>Certificate</strong>: ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies</strong>: ${course.technology.join(", ")}</p>
+    `;
+    modal.showModal();
+    const closeModal = document.querySelector("#close-modal");
+    closeModal.addEventListener("click", () => {
+        modal.close();
+    });
+};
+
 // display courses
 const courseContainer = document.querySelector(".course-btns");
 
@@ -103,6 +122,9 @@ function displayCourses(coursesToDisplay) {
         const button = document.createElement("button");
         button.textContent = `${course.subject} ${course.number}`;
         button.classList.add(course.completed ? "completed" : "not-completed");
+        button.addEventListener("click", () => {
+            displayCourseDetails(course);
+        });
         courseContainer.appendChild(button);
     });
 }
@@ -110,9 +132,9 @@ function displayCourses(coursesToDisplay) {
 displayCourses(courses);
 
 // filter courses
-const filterBUttons = document.querySelectorAll(".cert-btns button");
+const filterButtons = document.querySelectorAll(".filter-btns button");
 
-filterBUttons.forEach((button) => {
+filterButtons.forEach((button) => {
     button.addEventListener("click", () => {
         const filter = button.textContent;
         let filteredCourses;
@@ -144,3 +166,5 @@ creditsElement.textContent = `Total Credits = ${completedCredits} / ${totalCredi
 document
     .querySelector(".certificates .card-content")
     .appendChild(creditsElement);
+
+// display modal
