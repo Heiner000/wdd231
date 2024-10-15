@@ -4,19 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join Us | Phoenix Chamber of Commerce</title>
-    <meta name="description" content="Garrett Heiner's WDD 231 - Phoenix Chamber of Commerce Join page">
+    <title>Thank You | Phoenix Chamber of Commerce</title>
+    <meta name="description" content="Garrett Heiner's WDD 231 - Phoenix Chamber of Commerce Thank You page">
     <meta name="author" content="Garrett Heiner">
 
-    <meta property="og:title" content="WDD 231 - Garrett Heiner - Phoenix Chamber of Commerce Join page">
+    <meta property="og:title" content="WDD 231 - Garrett Heiner - Phoenix Chamber of Commerce join page">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://heiner000.github.io/wdd231/chamber/images/hero.webp">
     <meta property="og:url" content="https://heiner000.github.io/wdd231/chamber/index.html">
-    <meta property="og:description" content="Garrett Heiner's WDD 231 - Phoenix Chamber of Commerce Join page">
+    <meta property="og:description" content="Garrett Heiner's WDD 231 - Phoenix Chamber of Commerce join page">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="WDD 231 - Garrett Heiner - Phoenix Chamber of Commerce Join page">
-    <meta name="twitter:description" content="Phoenix Chamber of Commerce Join page">
+    <meta name="twitter:title" content="WDD 231 - Garrett Heiner - Phoenix Chamber of Commerce join page">
+    <meta name="twitter:description" content="Phoenix Chamber of Commerce join page">
     <meta name="twitter:image" content="https://heiner000.github.io/wdd231/chamber/images/phx-landscape.webp">
 
     <link rel="icon" href="/chamber/images/sunnyCactus.ico" type="image/x-icon">
@@ -31,8 +31,9 @@
     <link rel="stylesheet" href="./styles/small1.css">
     <link rel="stylesheet" href="./styles/large1.css">
 
+    <!-- <script src="scripts/weather.js" defer></script> -->
     <!-- <script src="scripts/home.js" type="module"></script> -->
-    <script src="scripts/join.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
     <!-- <script src="./scripts/chamber.js" defer></script> -->
 </head>
 
@@ -56,82 +57,13 @@
         </nav>
     </header>
 
-    <main class="container" role="main">
-        <form action="thankyou.html" method="get">
-            <h2>Membership Application Form</h2>
-            <label for="first-name">First Name:
-                <input type="text" id="first-name" name="first-name" required autocomplete="given-name">
-            </label>
+    <main>
+        <h2>Thank You for your Application!</h2>
 
-            <label for="last-name">Last Name:
-                <input type="text" id="last-name" name="last-name" required autocomplete="family-name">
-            </label>
+        <div class="" id="application-details"></div>
 
-            <label for="title">Title:
-                <input type="text" id="title" name="title" autocomplete="organization-title" pattern="[A-Za-z\s-]{7,}"
-                    title="At least 7 alphabetic characters ">
-            </label>
-
-            <label for="email">Email:
-                <input type="email" id="email" name="email" required autocomplete="email"
-                    placeholder="johnSmith@aol.com">
-            </label>
-
-            <label for="phone">Mobile Phone:
-                <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="555-555-5555">
-            </label>
-
-            <label for="organization">Business/Organization Name:
-                <input type="text" id="organization" name="organization" required autocomplete="organization">
-            </label>
-
-            <label for="membership">Membership Level:
-                <select name="membership" id="membership" required>
-                    <option value="">Select a membership level</option>
-                    <option value="np">NP Membership (no fee)</option>
-                    <option value="bronze">Bronze Membership</option>
-                    <option value="silver">Silver Membership</option>
-                    <option value="gold">Gold Membership</option>
-                </select>
-            </label>
-
-            <label for="description">Organization Description:
-                <textarea name="description" id="description" placeholder="title & name"></textarea>
-            </label>
-
-            <input type="hidden" id="timestamp" name="timestamp">
-
-            <input type="submit" value="Submit Application">
-        </form>
-
-        <div class="membership-cards">
-            <h2>Membership Levels</h2>
-            <div class="card">
-                <h3>Non-Profit Membership</h3>
-                <button id="np-btn">Learn More</button>
-            </div>
-
-            <div class="card">
-                <h3>Bronze Membership</h3>
-                <button id="bronze-btn">Learn More</button>
-            </div>
-
-            <div class="card">
-                <h3>Silver Membership</h3>
-                <button id="silver-btn">Learn More</button>
-            </div>
-
-            <div class="card">
-                <h3>Gold Membership</h3>
-                <button id="gold-btn">Learn More</button>
-            </div>
-
-            <dialog class="membership-modal" id="np-modal"></dialog>
-            <dialog class="membership-modal" id="bronze-modal"></dialog>
-            <dialog class="membership-modal" id="silver-modal"></dialog>
-            <dialog class="membership-modal" id="gold-modal"></dialog>
-        </div>
     </main>
+
 
     <footer>
         <div class="container">

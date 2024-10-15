@@ -282,6 +282,76 @@ main {
     background-color: var(--background-color);
 }
 
+/* join page styles */
+.container[role="main"] {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+input,
+select,
+textarea {
+    padding: 0.5rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    cursor: point;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #e67e22;
+}
+
+.membership-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card {
+    background-color: var(--background-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card button {
+    background-color: var(--secondary-color);
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+    background-color: #6c8eb3;
+}
+
 /* Footer styles */
 footer {
     display: block;
