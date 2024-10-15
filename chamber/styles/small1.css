@@ -312,7 +312,7 @@ textarea {
 input[type="submit"] {
     background-color: var(--primary-color);
     color: white;
-    cursor: point;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
