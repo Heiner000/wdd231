@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover | Phoenix Chamber of Commerce</title>
+    <meta name="description" content="Garrett Heiner's WDD 231 - Phoenix Chamber of Commerce discover page">
+    <meta name="author" content="Garrett Heiner">
+
+    <meta property="og:title" content="WDD 231 - Garrett Heiner - Discover Phoenix Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://heiner000.github.io/wdd231/chamber/images/hero.webp">
+    <meta property="og:url" content="https://heiner000.github.io/wdd231/chamber/index.html">
+    <meta property="og:description" content="Garrett Heiner's WDD 231 - Phoenix Chamber of Commerce discover page">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="WDD 231 - Garrett Heiner - Phoenix Chamber of Commerce discover page">
+    <meta name="twitter:description" content="Phoenix Chamber of Commerce discover page">
+    <meta name="twitter:image" content="https://heiner000.github.io/wdd231/chamber/images/phx-landscape.webp">
+
+    <link rel="icon" href="/chamber/images/sunnyCactus.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/small1.css">
+    <link rel="stylesheet" href="./styles/large1.css">
+
+    <script src="scripts/common.js"></script>
+    <script src="scripts/discover.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="./images/cactus.png" alt="Phoenix Chamber of Commerce" class="small-logo">
+        <img src="./images/phx-landscape.webp" alt="Phoenix Chamber of Commerce" class="large-logo">
+        <h1>Phoenix <br><span>Chamber of Commerce</span></h1>
+
+        <button id="menu-toggle" aria-expanded="false" aria-controls="menu-toggle">
+            <span class="sr-only">Menu</span>
+            <span aria-hidden="true"></span>
+        </button>
+        <nav id="animate-me" aria-label="Main Navigation">
+            <ul class="">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html" class="open">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="discover">
+        <h1>Discover Phoenix</h1>
+
+        <div class="discover-layout">
+            <section class="sidebar">
+                <h2>Phoenix at a Glance</h2>
+                <ul>
+                    <li>Population: 1,680,992 (2021 estimate)</li>
+                    <li>Median Age: 34.2 years</li>
+                    <li>Median Household Income: $60,914</li>
+                    <li>Area: 517.9 square miles</li>
+                    <li>Founded: 1867</li>
+                    <li>Climate: Hot desert climate</li>
+                </ul>
+
+                <h3>Key Industries</h3>
+                <ul>
+                    <li>Technology & Innovation</li>
+                    <li>Healthcare</li>
+                    <li>Finanical Services</li>
+                    <li>Manufacturing</li>
+                    <li>Tourism</li>
+                </ul>
+                <p>Phoenix hosts more than 16 million visitors annually, offering world-class resorts, gold courses, &
+                    cultural attractions.</p>
+            </section>
+
+            <section class="gallery">
+                <h2>Phoenix Photo Gallery</h2>
+                <figure>
+                    <img src="images/phoenix-skyline.webp" alt="Phoenix Skyline" loading="lazy">
+                    <figcaption>The stunning Phoenix skyline at sunset</figcaption>
+                    <!-- Photo by <a href="https://unsplash.com/@naderabushhab?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Nader Abushhab</a> on <a href="https://unsplash.com/photos/people-on-beach-during-daytime-HWLyAQ4Jsgc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> -->
+
+                </figure>
+                <figure>
+                    <img src="images/botanical-garden.webp" alt="Desert Botanical Garden" loading="lazy">
+                    <figcaption>Beautiful cacti at the Desert Botanical Garden</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/camelback-mountain.webp" alt="Camelback Mountain" loading="lazy">
+                    <figcaption>Hikers enjoying the view from Camelback Mountain</figcaption>
+                    <!-- Photo by <a href="https://unsplash.com/@jamesamolnar?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">James A. Molnar</a> on <a href="https://unsplash.com/photos/a-view-of-a-city-with-mountains-in-the-background-Jmby0pw_06g?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> -->
+                </figure>
+                <figure>
+                    <img src="images/heard-museum.webp" alt="Heard Museum" loading="lazy">
+                    <figcaption>Native American art is preserved at the Heard Museum</figcaption>
+                    <!-- https://assets.simpleviewinc.com/simpleview/image/upload/crm/phoenix/Freeport-McMoRan-Plaza-2_0BC220A3-5CF2-4727-BBC62E3AA8578577_c9444371-bf35-4114-822e2db2d0b9ec39.jpg -->
+                </figure>
+                <figure>
+                    <img src="images/papago-park.webp" data-src="images/papago-park.jpg" alt="Papago Park"
+                        loading="lazy">
+                    <figcaption>The iconic "Hole-in-the-Rock" at Papago Park</figcaption>
+                    <!-- https://www.tempetourism.com/wp-content/uploads/Papago-Park.Hole-in-the-Rock.headerl.png -->
+                </figure>
+                <figure>
+                    <img src="images/mim.webp" alt="Musical Instrument Museum" loading="lazy">
+                    <figcaption>Explore global music at the Musical Instrument Museum</figcaption>
+                    <!-- https://mim.org/wp-content/uploads/2020/03/PlanYourVisit_LocationParking-1-1024x684.jpg -->
+                </figure>
+            </section>
+        </div>
+
+        <div id="visit-message"></div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Phoenix Chamber of Commerce</p>
+            <p>2575 E. Camelback Road</p>
+            <p>Phoenix, AZ 85016</p>
+            <p>info@phoenixchamber.com</p>
+            <p>602-495-2195</p>
+        </div>
+        <div class=" socials">
+            <a href="https://youtube.com" target="_blank">
+                <figure>
+                    <img src="images/youtube.png" alt="Youtube" loading="lazy" height="64">
+                    <!-- <a href="https://www.flaticon.com/free-icons/youtube" title="youtube icons">Youtube icons created by Freepik - Flaticon</a> -->
+                </figure>
+            </a>
+            <a href="https://x.com" target="_blank">
+                <figure>
+                    <img src="images/twitter.png" alt="X or Twitter" loading="lazy" height="64">
+                    <!-- <a href="https://www.flaticon.com/free-icons/tweet" title="tweet icons">Tweet icons created by Freepik - Flaticon</a> -->
+                </figure>
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+                <figure>
+                    <img src="images/linkedin.png" alt="LinkedIn" loading="lazy" height="64">
+                    <!-- <a href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">Linkedin icons created by riajulislam - Flaticon</a> -->
+                </figure>
+            </a>
+        </div>
+        <div class="container">
+            <p>WDD231 Class Project</p>
+            <p>Garrett Heiner</p>
+            <p>©<span id="current-year"></span> | Phoenix Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
