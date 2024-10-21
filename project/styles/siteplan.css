@@ -1,0 +1,53 @@
+/* Root styles and variables */
+:root {
+    --primary-color: #1e3a8a;
+    --secondary-color: #60a5fa;
+    --background-color: #f3f4f6;
+    --text-color: #111827;
+    --font-heading: "Montserrat", sans-serif;
+    --font-body: "Open Sans", sans-serif;
+    --font-accent: "Roboto", sans-serif;
+}
+
+/* Layout */
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* color samples */
+.color-sample {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+}
+
+/* wireframes */
+.wireframe {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+}
+
+/* lists */
+ul,
+ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#heading-text {
+    font-family: var(--font-heading);
+}
+
+#body-text {
+    font-family: var(--font-body);
+}
+
+#accent-text {
+    font-family: var(--font-accent);
+}
