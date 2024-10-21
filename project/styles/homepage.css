@@ -1,0 +1,145 @@
+/* Root styles and variables */
+:root {
+    --primary-color: #1e3a8a;
+    --secondary-color: #60a5fa;
+    --background-color: #f3f4f6;
+    --text-color: #111827;
+    --font-heading: "Montserrat", sans-serif;
+    --font-body: "Open Sans", sans-serif;
+    --font-accent: "Roboto", sans-serif;
+}
+
+/* hero section */
+.hero {
+    position: relative;
+    background-image: url(../images/reiHouse.webp);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    font-weight: bolder;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.hero p {
+    font-size: 1rem;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/* search bar */
+.search-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+}
+
+.search-bar input {
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.search-bar .btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+/* .market-trends {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.trend-item {
+    background-color: var(--background-color);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.trend-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+} */
+
+.blurb {
+    padding: 0 1rem;
+}
+
+.blurb ul {
+    padding-left: 1.5rem;
+}
+
+.blurb li {
+    margin-bottom: 0.5rem;
+}
+
+/* desktop styles */
+@media (min-width: 768px) {
+    .hero {
+        height: 400px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+        max-width: 60%;
+    }
+
+    .search-bar {
+        flex-direction: row;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .search-bar input {
+        width: 60%;
+        max-width: 400px;
+        margin-bottom: 0;
+        margin-right: 0.5rem;
+    }
+
+    .search-bar .btn {
+        width: auto;
+    }
+
+    .blurb {
+        padding: 0;
+    }
+}
