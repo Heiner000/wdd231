@@ -24,7 +24,7 @@
     <meta name="twitter:image"
         content="https://images.unsplash.com/photo-1634757439914-23b8acb9d411?q=80&w=1288&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
 
-    <link rel="icon" href="./images/dollarFavIcon.ico" type="image/x-icon">
+    <link rel="icon" href="images/dollarFavIcon.ico" type="image/x-icon">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,7 +47,7 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="property-search.html">Property Search</a></li>
-                <li><a href="#">FAQ</a></li>
+                <li><a href="faq.html">FAQ</a></li>
             </ul>
         </nav>
     </header>
@@ -75,6 +75,81 @@
                 <!-- dynamic property cards -->
             </div>
         </section>
+
+        <dialog class="property-modal">
+            <div class="modal-content">
+                <div>
+                    <h2 class="modal-title"></h2>
+                    <button class="close-btn" area-label="Close modal">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="property-info">
+                        <img src="images/reiHouse.webp" alt="property image">
+                        <div class="details">
+                            <p class="property-price"></p>
+                            <p class="property-specs"></p>
+                            <p class="property-location"></p>
+                        </div>
+                    </div>
+
+                    <div class="calculator-section">
+                        <h3>Investment Calculator</h3>
+                        <form action="" id="calculatorForm">
+                            <div class="form-group">
+                                <label for="downPayment">Down Payment ($)
+                                    <input type="number" id="downPayment" required>
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="interestRate">Interest Rate (%)
+                                    <input type="number" id="interestRate" value="7.5" step="0.25" required>
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="monthlyRent">Expected Monthly Rent ($)
+                                    <input type="number" id="monthlyRent" required>
+                                </label>
+                            </div>
+
+                            <button type="button" class="btn toggle-advanced">Show Advanced Options</button>
+
+                            <div class="advanced-options hidden">
+                                <div class="form-group">
+                                    <label for="propertyTax">Annual Property Tax ($)
+                                        <input type="number" id="propertyTax">
+                                    </label>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="insurance">Annual Insurance ($)
+                                        <input type="number" id="insurance" value="1200">
+                                    </label>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="maintenance">Annual Maintenance ($)
+                                        <input type="number" id="maintenance">
+                                    </label>
+                                </div>
+
+                            </div>
+                        </form>
+
+                        <div class="calculator-results">
+                            <h4>Monthly Breakdown</h4>
+                            <p>Mortgage: $<span id="mortgageResult">0</span></p>
+                            <p>Total Expenses: $<span id="expensesResult">0</span></p>
+                            <p>Cash Flow: $<span id="cashFlowResult">0</span></p>
+                            <p>Cash on Cash ROI: <span id="roiResult">0</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </dialog>
+
     </main>
 
     <footer>

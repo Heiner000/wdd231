@@ -24,7 +24,7 @@
     <meta name="twitter:image"
         content="https://images.unsplash.com/photo-1634757439914-23b8acb9d411?q=80&w=1288&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
 
-    <link rel="icon" href="./images/dollarFavIcon.ico" type="image/x-icon">
+    <link rel="icon" href="images/dollarFavIcon.ico" type="image/x-icon">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,10 +32,11 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&family=Roboto&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="./styles/common.css">
-    <link rel="stylesheet" href="./styles/homepage.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/homepage.css">
 
-    <script src="./scripts/main.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/homepage.js" defer></script>
 </head>
 
 <body>
@@ -44,7 +45,7 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="property-search.html">Property Search</a></li>
-                <li><a href="#">FAQ</a></li>
+                <li><a href="faq.html">FAQ</a></li>
             </ul>
         </nav>
     </header>
@@ -59,9 +60,11 @@
 
         <section class="search-bar">
             <h3>Find Your Next Investment</h3>
-            <input type="text" placeholder="Enter a city or zip code">
+            <label for="search-properties"></label>
+            <input type="text" placeholder="Enter a city or zip code" name="search-properties" requried>
             <button class="btn">Search Properties</button>
         </section>
+
         <!--
         <section>
             <h2>Current Market Trends</h2>

@@ -51,3 +51,10 @@ ol {
 #accent-text {
     font-family: var(--font-accent);
 }
+
+/* Desktop styles */
+@media (min-width: 768px) {
+    .wireframe {
+        margin-bottom: 2rem;
+    }
+}
