@@ -75,25 +75,9 @@
     font-size: 1rem;
 }
 
-/* .market-trends {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-bottom: 2rem;
+.search-wrapper {
+    width: 100%;
 }
-
-.trend-item {
-    background-color: var(--background-color);
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.trend-item h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-} */
 
 .blurb {
     padding: 0 1rem;
