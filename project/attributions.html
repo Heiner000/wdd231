@@ -4,16 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Attributions | PropInvest</title>
+    <meta name="description"
+        content="Home page for PropInvest, a comprehensive platform for real estate investment insights and tools">
+    <meta name="author" content="Garrett Heiner">
+
+    <meta property="og:title" content="PropInvest - Real Estate Investment Insights home page">
+    <meta property="og:type" content="website">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1634757439914-23b8acb9d411?q=80&w=1288&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+    <meta property="og:url" content="https://heiner000.github.io/wdd231/project/">
+    <meta property="og:description"
+        content="Home page for PropInvest, a comprehensive platform for real estate investment insights and tools">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="PropInvest - Real Estate Investment Insights home page">
+    <meta name="twitter:description"
+        content="Home page for PropInvest, a comprehensive platform for real estate investment insights and tools">
+    <meta name="twitter:image"
+        content="https://images.unsplash.com/photo-1634757439914-23b8acb9d411?q=80&w=1288&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+
+    <link rel="icon" href="images/dollarFavIcon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&family=Roboto&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/common.css">
+    <script src="scripts/main.js" defer></script>
+
 </head>
 
 <body>
-    <main>
-        Photo by <a
-            href="https://unsplash.com/@leekos?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Kostiantyn
-            Li</a> on <a
-            href="https://unsplash.com/photos/a-house-made-out-of-money-on-a-white-background-1sCXwVoqKAw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+    <header>
+        <h1>PropInvest</h1>
+        <div class="container">
+            <button id="menuButton" aria-label="Toggle Menu"></button>
+            <nav>
+                <ul class="menuLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="property-search.html">Property Search</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Attributions</h2>
+        <ul>
+            <li>
+                Photo by <a
+                    href="https://unsplash.com/@leekos?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Kostiantyn
+                    Li</a> on <a
+                    href="https://unsplash.com/photos/a-house-made-out-of-money-on-a-white-background-1sCXwVoqKAw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
+            </li>
+        </ul>
     </main>
+
+    <footer>
+        <div class="container">
+            <p>©<span id="current-year"></span> | Garrett Heiner | <a href="attributions.html">Attributions</a></p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
 </body>
 
 </html>

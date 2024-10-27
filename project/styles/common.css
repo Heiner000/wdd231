@@ -218,6 +218,12 @@ footer {
     margin-top: var(--spacing-lg);
 }
 
+footer a {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+
 /* wayfinding */
 nav ul li a.active {
     background-color: var(--background-color);
