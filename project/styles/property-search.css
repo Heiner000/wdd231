@@ -87,6 +87,49 @@
     animation: modal-fade 0.3s ease normal;
 }
 
+/* indicator styles */
+.result-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.indicator {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+}
+
+.indicator .check {
+    color: #22c55e;
+    font-weight: bold;
+}
+
+.indicator .x {
+    color: #ef4444;
+    font-weight: bold;
+}
+
+.investment-message {
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-sm);
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.investment-message.positive {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.investment-message.negative {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
 @keyframes modal-fade {
     from {
         opacity: 0;
@@ -181,9 +224,15 @@
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
+    .modal-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     .property-info {
         padding: var(--spacing-md);
-        /* grid-template-columns: 1fr 1fr; */
     }
 
     .property-modal .property-info {

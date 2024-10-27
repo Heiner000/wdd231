@@ -38,18 +38,22 @@
 
     <script src="scripts/main.js" defer></script>
     <script src="scripts/property-search.js" type="module"></script>
-    <script type="module" src="data/testData.js"></script>
+    <!-- <script type="module" src="data/testData.js"></script> -->
 </head>
 
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="property-search.html">Property Search</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-            </ul>
-        </nav>
+        <h1>PropInvest</h1>
+        <div class="container">
+            <button id="menuButton" aria-label="Toggle Menu"></button>
+            <nav>
+                <ul class="menuLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="property-search.html">Property Search</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main class="container">
@@ -61,6 +65,7 @@
                 <select name="propertyType" id="propertyType">
                     <option value="">All Property Types</option>
                     <option value="House">House</option>
+                    <option value="Condo">Condo</option>
                     <option value="Townhouse">Townhouse</option>
                 </select>
                 <input type="number" name="minPrice" id="minPrice" placeholder="Min Price">
@@ -78,7 +83,7 @@
 
         <dialog class="property-modal">
             <div class="modal-content">
-                <div>
+                <div class="modal-header">
                     <h2 class="modal-title"></h2>
                     <button class="close-btn" area-label="Close modal">&times;</button>
                 </div>

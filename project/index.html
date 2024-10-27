@@ -41,13 +41,17 @@
 
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="property-search.html">Property Search</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-            </ul>
-        </nav>
+        <h1>PropInvest</h1>
+        <div class="container">
+            <button id="menuButton" aria-label="Toggle Menu"></button>
+            <nav>
+                <ul class="menuLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="property-search.html">Property Search</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -60,9 +64,14 @@
 
         <section class="search-bar">
             <h3>Find Your Next Investment</h3>
-            <label for="search-properties"></label>
-            <input type="text" placeholder="Enter a city or zip code" name="search-properties" requried>
-            <button class="btn">Search Properties</button>
+            <form action="" class="search-bar" id="homepageSearchForm">
+                <div class="search-wrapper">
+                    <label for="location"></label>
+                    <input type="text" id="locationSearch" name="location" placeholder="Enter city or zip code" required
+                        aria-label="Search location">
+                    <button type="submit" class="btn">Search Properties</button>
+                </div>
+            </form>
         </section>
 
         <!--
