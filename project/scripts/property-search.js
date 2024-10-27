@@ -135,14 +135,42 @@ document.addEventListener("DOMContentLoaded", () => {
     const searchForm = document.querySelector("#searchForm");
     const loadingIndicator = document.createElement("div");
     loadingIndicator.className = "loading-indicator";
+    loadingIndicator.textContent = "Searching properties...";
 
     if (searchForm) {
+        // Check for last search in localStorage
+        const lastSearch = localStorage.getItem("lastSearch");
+        if (lastSearch) {
+            try {
+                const { location, propertyType, minPrice, maxPrice } =
+                    JSON.parse(lastSearch);
+
+                // Populate form fields
+                document.querySelector("#location").value = location || "";
+                document.querySelector("#propertyType").value =
+                    propertyType || "";
+                document.querySelector("#minPrice").value = minPrice || "";
+                document.querySelector("#maxPrice").value = maxPrice || "";
+
+                // If we have a location, trigger search automatically
+                if (location) {
+                    // Trigger with small delay to ensure DOM is ready
+                    setTimeout(() => {
+                        searchForm.dispatchEvent(new Event("submit"));
+                    }, 100);
+                }
+            } catch (err) {
+                console.warn("Failed to parse last search:", err);
+            }
+        }
+
+        // Add submit event listener
         searchForm.addEventListener("submit", async (e) => {
             e.preventDefault();
             const propertyGrid = document.querySelector("#propertyGrid");
             const resultsSection = document.querySelector(".results-container");
 
-            // update loading text based on cache status
+            // Update loading text based on cache status
             const location = document.querySelector("#location").value;
             const propertyType = document.querySelector("#propertyType").value;
             const minPrice = document.querySelector("#minPrice").value;
@@ -160,7 +188,7 @@ document.addEventListener("DOMContentLoaded", () => {
             scrollToElement(resultsSection);
 
             try {
-                // store search parameters
+                // Store search parameters
                 PropertyCache.storeLastSearch(searchParams);
 
                 const properties = await searchProperties(
@@ -170,35 +198,22 @@ document.addEventListener("DOMContentLoaded", () => {
                     maxPrice
                 );
                 displayProperties(properties);
-            } catch (err) {
+            } catch (error) {
                 propertyGrid.innerHTML = `
-                    <div class="error-msg">
-                        <p>${err.msg}</p>
+                    <div class="error-message">
+                        <p>${error.message}</p>
                         <button onclick="window.location.reload()">Try Again</button>
                     </div>`;
                 scrollToElement(resultsSection);
             }
         });
 
-        // load last search from localStorage
-        const lastSearch = localStorage.getItem("lastSearch");
-        if (lastSearch) {
-            const { location, propertyType, minPrice, maxPrice } =
-                JSON.parse(lastSearch);
-            document.querySelector("#location").value = location || "";
-            document.querySelector("#propertyType").value = propertyType || "";
-            document.querySelector("#minPrice").value = minPrice || "";
-            document.querySelector("#maxPrice").value = maxPrice || "";
-        }
-
-        // clear expired cache entries on page load
+        // Clear expired cache entries on page load
         PropertyCache.clearOldEntries();
     }
 });
 
-// Smoothly scrolls to an element
-//  @param {HTMLElement} element - Element to scroll to
-
+// Smoothly scroll to an element
 function scrollToElement(element) {
     // Get the header height to offset the scroll position
     const header = document.querySelector("header");
@@ -283,71 +298,95 @@ function displayProperties(properties) {
     scrollToElement(resultsSection);
 }
 
-// Initialize search form event listener
-document.addEventListener("DOMContentLoaded", () => {
-    const searchForm = document.querySelector("#searchForm");
-    const loadingIndicator = document.createElement("div");
-    loadingIndicator.className = "loading-indicator";
-    loadingIndicator.textContent = "Searching properties...";
+// // Initialize search form event listener
+// document.addEventListener("DOMContentLoaded", () => {
+//     const searchForm = document.querySelector("#searchForm");
+//     const loadingIndicator = document.createElement("div");
+//     loadingIndicator.className = "loading-indicator";
 
-    if (searchForm) {
-        searchForm.addEventListener("submit", async (e) => {
-            e.preventDefault();
-            const propertyGrid = document.querySelector("#propertyGrid");
-            const resultsSection = document.querySelector(".results-container");
+//     if (searchForm) {
+//         // check for last search in local storage
+//         const lastSearch = localStorage.getItem("lastSearch");
+//         if (lastSearch) {
+//             try {
+//                 const { location, propertyType, minPrice, maxPrice } =
+//                     JSON.parse(lastSearch);
 
-            // Show loading indicator and scroll to it
-            propertyGrid.innerHTML = "";
-            propertyGrid.appendChild(loadingIndicator);
-            scrollToElement(resultsSection);
+//                 // populate form fields
+//                 document.querySelector("#location").value = location || "";
+//                 document.querySelector("#propertyType").value =
+//                     propertyType || "";
+//                 document.querySelector("#minPrice").value = minPrice || "";
+//                 document.querySelector("#maxPrice").value = maxPrice || "";
 
-            try {
-                const location = document.querySelector("#location").value;
-                const propertyType =
-                    document.querySelector("#propertyType").value;
-                const minPrice = document.querySelector("#minPrice").value;
-                const maxPrice = document.querySelector("#maxPrice").value;
+//                 // if we have the lcoation, trigger search automatically
+//                 if (location) {
+//                     // trigger w/ small delay to ensure DOM is ready
+//                     setTimeout(() => {
+//                         searchForm.dispatchEvent(new Event("submit"));
+//                     }, 100);
+//                 }
+//             } catch (err) {
+//                 console.warn("Failed to parse last search - ", err);
+//             }
+//         }
+//         searchForm.addEventListener("submit", async (e) => {
+//             e.preventDefault();
+//             const propertyGrid = document.querySelector("#propertyGrid");
+//             const resultsSection = document.querySelector(".results-container");
 
-                // Store search in localStorage
-                localStorage.setItem(
-                    "lastSearch",
-                    JSON.stringify({
-                        location,
-                        propertyType,
-                        minPrice,
-                        maxPrice,
-                    })
-                );
+//             // Show loading indicator and scroll to it
+//             propertyGrid.innerHTML = "";
+//             propertyGrid.appendChild(loadingIndicator);
+//             scrollToElement(resultsSection);
 
-                const properties = await searchProperties(
-                    location,
-                    propertyType,
-                    minPrice,
-                    maxPrice
-                );
-                displayProperties(properties);
-            } catch (error) {
-                propertyGrid.innerHTML = `
-                    <div class="error-message">
-                        <p>${error.message}</p>
-                        <button onclick="window.location.reload()">Try Again</button>
-                    </div>`;
-                scrollToElement(resultsSection);
-            }
-        });
+//             try {
+//                 const location = document.querySelector("#location").value;
+//                 const propertyType =
+//                     document.querySelector("#propertyType").value;
+//                 const minPrice = document.querySelector("#minPrice").value;
+//                 const maxPrice = document.querySelector("#maxPrice").value;
 
-        // Load last search from localStorage
-        const lastSearch = localStorage.getItem("lastSearch");
-        if (lastSearch) {
-            const { location, propertyType, minPrice, maxPrice } =
-                JSON.parse(lastSearch);
-            document.querySelector("#location").value = location || "";
-            document.querySelector("#propertyType").value = propertyType || "";
-            document.querySelector("#minPrice").value = minPrice || "";
-            document.querySelector("#maxPrice").value = maxPrice || "";
-        }
-    }
-});
+//                 // Store search in localStorage
+//                 localStorage.setItem(
+//                     "lastSearch",
+//                     JSON.stringify({
+//                         location,
+//                         propertyType,
+//                         minPrice,
+//                         maxPrice,
+//                     })
+//                 );
+
+//                 const properties = await searchProperties(
+//                     location,
+//                     propertyType,
+//                     minPrice,
+//                     maxPrice
+//                 );
+//                 displayProperties(properties);
+//             } catch (error) {
+//                 propertyGrid.innerHTML = `
+//                     <div class="error-message">
+//                         <p>${error.message}</p>
+//                         <button onclick="window.location.reload()">Try Again</button>
+//                     </div>`;
+//                 scrollToElement(resultsSection);
+//             }
+//         });
+
+//         // Load last search from localStorage
+//         const lastSearch = localStorage.getItem("lastSearch");
+//         if (lastSearch) {
+//             const { location, propertyType, minPrice, maxPrice } =
+//                 JSON.parse(lastSearch);
+//             document.querySelector("#location").value = location || "";
+//             document.querySelector("#propertyType").value = propertyType || "";
+//             document.querySelector("#minPrice").value = minPrice || "";
+//             document.querySelector("#maxPrice").value = maxPrice || "";
+//         }
+//     }
+// });
 
 function initializePropertyModal(property) {
     const modal = document.querySelector(".property-modal");

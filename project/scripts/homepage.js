@@ -24,12 +24,16 @@ function handleSearch(e) {
 
     if (searchTerm) {
         // store search term in local storage
-        localStorage.setItem("lastSearch", JSON.stringify({
+        const searchParams = {
             location: searchTerm,
             propertyType: "",
             minPrice: "",
-            maxPrice: ""
-        }));
+            maxPrice: "",
+        };
+
+        // store search data
+        localStorage.setItem("lastSearch", JSON.stringify(searchParams));
+        saveRecentSearch(searchTerm);
 
         // redirect to property search page w/ location parameter
         window.location.href = `property-search.html`;
@@ -43,7 +47,6 @@ function handleSearchInput(e) {
     searchTimeout = setTimeout(() => {
         const searchTerm = e.target.value.trim();
         if (searchTerm.length >= 3) {
-            // store this as potential search term
             localStorage.setItem("lastPartialSearch", searchTerm);
         }
     }, 500);
@@ -51,7 +54,7 @@ function handleSearchInput(e) {
 
 // save recent searches to localStorage
 function saveRecentSearch(searchTerm) {
-    const recentSearch = getRecentSearches();
+    const recentSearches = getRecentSearches();
 
     // add a new search to beginning of array
     recentSearches.unshift(searchTerm);
@@ -79,9 +82,14 @@ function getRecentSearches() {
 
 // restore last search term
 function restoreLastSearch() {
-    const lastSearch = localStorage.getItem("lastHomeSearch");
-    if (lastSearch && searchInput) {
-        searchInput.value = lastSearch;
+    try {
+        const lastSearch = localStorage.getItem("lastSearch");
+        if (lastSearch && searchInput) {
+            const { location } = JSON.parse(lastSearch);
+            searchInput.value = location || "";
+        }
+    } catch (err) {
+        console.warn("Failed to restore last search: ", err);
     }
 }
 
